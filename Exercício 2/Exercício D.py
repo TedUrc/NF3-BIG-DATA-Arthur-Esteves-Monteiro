@@ -38,7 +38,18 @@ for uf, nIA, nPA, nIC, nPC in tabela[['uf_busca', 'nota_integral_ampla', 'nota_p
             estados_notas[uf][7] += 1
 keys = list(estados_notas.keys())
 var = list(estados_notas.values())
-valores = [(keys[x], var[x][0] / var[x][4], var[x][1] / var[x][5], var[x][2] / var[x][6], var[x][3] / var[x][7]) for x in range(len(keys))]
+valores = list()
+for x in range(len(keys)):
+    if var[x][0] > 0:
+        z = var[x][0] / var[x][4]
+    if var[x][1] > 0:
+        y = var[x][1] / var[x][5]
+    if var[x][2] > 0:
+        b = var[x][2] / var[x][6]
+    if var[x][3] > 0:
+        n = var[x][3] / var[x][7]
+    valores.append([keys[x], z, y, b, n])
+    z = y = b = n = 0
 estados_notas = pd.DataFrame(data=valores,
                              columns=['uf_busca', 'media_integral_ampla', 'media_parcial_ampla', 'media_integral_cotas', 'media_parcial_cotas'])
 display(estados_notas)
