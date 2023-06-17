@@ -10,9 +10,18 @@ tabela = pd.read_csv(io.BytesIO(uploaded['cursos-prouni.csv']))
 
 # Exercício D - Agrupe os dados por Estado e obtenha a média de notas de corte por Estado.
 estados_notas = dict()
+x = y = z = b = 0
 for uf, nIA, nPA, nIC, nPC in tabela[['uf_busca', 'nota_integral_ampla', 'nota_parcial_ampla', 'nota_integral_cotas', 'nota_parcial_cotas']].values:
     if uf not in estados_notas:
-        estados_notas.update({uf:[nIA, nPA, nIC, nPC, 1, 1, 1, 1]})
+        if nIA > 0:
+            x = 1
+        elif nPA > 0:
+            y = 1
+        elif nIC > 0:
+            z = 1
+        elif nPC > 0:
+            b = 1
+        estados_notas.update({uf:[nIA, nPA, nIC, nPC, x, y, z, b]})
     elif uf in estados_notas:
         if estados_notas[uf][0] > 0:
             estados_notas[uf][0] += nIA
