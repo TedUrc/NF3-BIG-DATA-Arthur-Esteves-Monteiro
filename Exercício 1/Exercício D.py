@@ -14,7 +14,7 @@ dataframe = pd.DataFrame(data=data, columns=colunas)
 colunas.clear()
 data.clear()
 
-# Exercício D
+# Exercício D - Realize análises estatísticas da coluna dos valores: Média, Moda, Mediana, Estatística Descritiva e Gráfico de comparação dos valores agrupados por tipo de bebida.
 media = dataframe['Display Value'].replace(str(), '0').astype(float).mean()
 moda = dataframe['Display Value'].replace(str(), '0').astype(float).mode()[0]
 mediana = dataframe['Display Value'].replace(str(), '0').astype(float).median()

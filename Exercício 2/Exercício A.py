@@ -8,7 +8,7 @@ uploaded = files.upload()
 
 tabela = pd.read_csv(io.BytesIO(uploaded['cursos-prouni.csv']))
 
-# Exercício A
+# Exercício A - Efetuar a limpeza das colunas de notas: onde tiver NaN (Not a Number), substituir por 0,0.
 tabela[['bolsa_integral_cotas',
        'bolsa_integral_ampla', 'bolsa_parcial_cotas',
        'bolsa_parcial_ampla', 'nota_integral_ampla',

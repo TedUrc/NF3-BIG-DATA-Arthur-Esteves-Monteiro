@@ -8,7 +8,7 @@ uploaded = files.upload()
 
 tabela = pd.read_csv(io.BytesIO(uploaded['cursos-prouni.csv']))
 
-# Exercício J
+# Exercício J - Gráfico comparativo entre o grau dos cursos (Bacharelado, Licenciatura, Tecnologia, etc) pelas Notas Integral de Cotas.
 grau_nota_cotas = dict()
 for pos, x in tabela[['grau', 'nota_integral_cotas']].values:
   if pos not in grau_nota_cotas:

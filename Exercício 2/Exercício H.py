@@ -8,7 +8,7 @@ uploaded = files.upload()
 
 tabela = pd.read_csv(io.BytesIO(uploaded['cursos-prouni.csv']))
 
-# Exercício H
+# Exercício H - Média das notas de corte dos cursos de tempo integral.
 cursos_nota_ampla = dict()
 for pos, x in tabela[['curso_busca', 'nota_integral_ampla']].values:
   if pos not in cursos_nota_ampla:

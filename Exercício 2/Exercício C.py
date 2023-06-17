@@ -8,7 +8,7 @@ uploaded = files.upload()
 
 tabela = pd.read_csv(io.BytesIO(uploaded['cursos-prouni.csv']))
 
-# Exercício C
+# Exercício C - Agrupe os dados pelos cursos de Matemática, Medicina e Pedagogia.
 curso = dict()
 for x in tabela['curso_busca']:
     if x.lower().strip() == 'matemática':

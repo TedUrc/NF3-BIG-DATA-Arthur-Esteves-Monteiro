@@ -14,7 +14,7 @@ dataframe = pd.DataFrame(data=data, columns=colunas)
 colunas.clear()
 data.clear()
 
-# Exercício B
+# Exercício B - Agrupe os dados por Região e por Ano;
 ano_regiao_dataframe = pd.DataFrame(data=dataframe[['Year', 'WHO region']],
                                     columns=['Year', 'WHO region'])
 display(ano_regiao_dataframe)

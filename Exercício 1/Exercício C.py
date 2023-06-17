@@ -14,7 +14,7 @@ dataframe = pd.DataFrame(data=data, columns=colunas)
 colunas.clear()
 data.clear()
 
-# Exercício C
+# Exercício C - Seção de Contagens: Contar a ocorrência de Regiões, de Países e a soma da coluna de valores por Bebida.
 contagem_regiao = collections.Counter(dataframe['WHO region'])
 contagem_valores_bebidas = sum((dataframe['Display Value'].replace(str(), '0')).astype(float))
 contagem_paises = collections.Counter(dataframe['Country'])

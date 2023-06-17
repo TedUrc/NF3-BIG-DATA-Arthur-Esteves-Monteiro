@@ -8,7 +8,7 @@ uploaded = files.upload()
 
 tabela = pd.read_csv(io.BytesIO(uploaded['cursos-prouni.csv']))
 
-# Exercício D
+# Exercício D - Agrupe os dados por Estado e obtenha a média de notas de corte por Estado.
 estados_notas = dict()
 for uf, nIA, nPA, nIC, nPC in tabela[['uf_busca', 'nota_integral_ampla', 'nota_parcial_ampla', 'nota_integral_cotas', 'nota_parcial_cotas']].values:
     if uf not in estados_notas:

@@ -8,7 +8,7 @@ uploaded = files.upload()
 
 tabela = pd.read_csv(io.BytesIO(uploaded['cursos-prouni.csv']))
 
-# Exercício I
+# Exercício I - Estatística Descritiva das Notas Integral Ampla dos cursos de Bacharelado.
 cursos_bacharelado_ampla = dict()
 for pos, x, y in tabela[['grau', 'curso_busca', 'nota_integral_ampla']].values:
   if pos.lower().strip() == 'bacharelado':

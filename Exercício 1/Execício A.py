@@ -14,7 +14,7 @@ dataframe = pd.DataFrame(data=data, columns=colunas)
 colunas.clear()
 data.clear()
 
-# Exercício A
+# Exercício A - Agrupe os dados por tipo de bebidas;
 bebidas = collections.Counter(dataframe['Beverage Types'])
 bebidas_dataframe = pd.DataFrame(data=bebidas.keys(),
                                  columns=['Beverage Types'])
