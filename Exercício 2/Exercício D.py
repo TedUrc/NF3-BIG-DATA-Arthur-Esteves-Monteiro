@@ -22,6 +22,7 @@ for uf, nIA, nPA, nIC, nPC in tabela[['uf_busca', 'nota_integral_ampla', 'nota_p
         if nPC > 0:
             b = 1
         estados_notas.update({uf:[nIA, nPA, nIC, nPC, x, y, z, b]})
+        x = y = z = b = 0
     elif uf in estados_notas:
         if estados_notas[uf][0] > 0:
             estados_notas[uf][0] += nIA
